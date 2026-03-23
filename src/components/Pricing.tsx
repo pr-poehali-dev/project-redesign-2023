@@ -1,28 +1,33 @@
-import { Check } from "lucide-react";
+import Icon from "@/components/ui/icon";
 
 const plans = [
   {
-    name: "Личный",
+    name: "Начало",
     price: "Бесплатно",
-    description: "Для тех, кто начинает путь осознанной продуктивности",
-    features: ["Неспешное управление задачами", "Ежедневная сессия фокуса", "Еженедельные размышления", "Доступ в приложении"],
-    cta: "Начать бесплатно",
+    description: "Для тех, кто делает первый шаг к осознанной работе",
+    features: [
+      "До 3 проектов и задач",
+      "5 сессий глубокой работы в день",
+      "Ежедневный дневник энергии",
+      "Режим одного фокуса",
+    ],
+    cta: "Попробовать бесплатно",
     highlighted: false,
   },
   {
-    name: "Профи",
-    price: "990 ₽",
+    name: "Практика",
+    price: "790 ₽",
     period: "/мес",
-    description: "Для тех, кто готов углубить практику",
+    description: "Для тех, кто готов жить и работать иначе",
     features: [
-      "Всё из тарифа Личный",
-      "Безлимитные сессии фокуса",
-      "Расписание часов тишины",
-      "Мягкая аналитика",
-      "Синхронизация с календарём",
-      "Приоритетная поддержка",
+      "Всё из тарифа Начало",
+      "Безлимитные сессии и проекты",
+      "Расписание режима тишины",
+      "Аналитика паттернов продуктивности",
+      "Интеграция с календарём",
+      "Поддержка в приоритете",
     ],
-    cta: "Начать путь",
+    cta: "Начать практику",
     highlighted: true,
   },
 ];
@@ -34,7 +39,7 @@ export function Pricing() {
         <div className="text-center mb-20">
           <span className="text-sm uppercase tracking-widest text-amber mb-4 block">Тарифы</span>
           <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-foreground mb-4 text-balance">
-            Простые и честные цены
+            Простые и честные условия
           </h2>
           <p className="text-muted-foreground text-lg">Без скрытых платежей. Отмена в любой момент.</p>
         </div>
@@ -65,7 +70,7 @@ export function Pricing() {
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <Check size={18} className="text-sage" />
+                    <Icon name="Check" size={18} className="text-sage" />
                     <span className={plan.highlighted ? "text-primary-foreground/90" : "text-foreground"}>
                       {feature}
                     </span>

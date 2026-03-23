@@ -1,25 +1,25 @@
-import { Clock, Layers, Moon, Sparkles } from "lucide-react";
+import Icon from "@/components/ui/icon";
 
 const features = [
   {
-    icon: Clock,
-    title: "Неспешное планирование",
-    description: "Тайм-блоки, которые уважают ваши естественные ритмы. Между задачами всегда есть время на паузу.",
+    icon: "Timer",
+    title: "Сессии глубокой работы",
+    description: "Настраиваемые блоки концентрации с паузами по вашему ритму. Без принуждения — только поддержка вашего естественного потока.",
   },
   {
-    icon: Layers,
-    title: "Фокус на текущем",
-    description: "Видите только то, что важно сейчас. Остальное терпеливо ждёт, пока вы будете готовы.",
+    icon: "Eye",
+    title: "Один фокус в моменте",
+    description: "Приложение показывает только одну задачу. Всё остальное надёжно сохранено и терпеливо ждёт своего часа.",
   },
   {
-    icon: Moon,
-    title: "Часы тишины",
-    description: "Автоматические периоды покоя, которые защищают ваше время глубокой работы от отвлечений.",
+    icon: "BellOff",
+    title: "Режим тишины",
+    description: "Запланированные окна покоя, которые защищают ваше время от внешних отвлечений. Ваш фокус — священен.",
   },
   {
-    icon: Sparkles,
-    title: "Мягкая аналитика",
-    description: "Вдумчивые наблюдения за вашими паттернами — без осуждения, с поддержкой.",
+    icon: "BarChart2",
+    title: "Дневник энергии",
+    description: "Мягкая аналитика вашего состояния и продуктивности. Понимайте себя лучше — без стресса и самокритики.",
   },
 ];
 
@@ -30,7 +30,7 @@ export function Features() {
         <div className="text-center mb-20">
           <span className="text-sm uppercase tracking-widest text-terracotta mb-4 block">Возможности</span>
           <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-foreground text-balance">
-            Инструменты, дарящие покой
+            Инструменты для спокойного ума
           </h2>
         </div>
 
@@ -41,7 +41,7 @@ export function Features() {
               className="group p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-sage/30 transition-colors duration-500"
             >
               <div className="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mb-6 group-hover:bg-sage/20 transition-colors duration-500">
-                <feature.icon size={24} className="text-sage" />
+                <Icon name={feature.icon} size={24} className="text-sage" fallback="Sparkles" />
               </div>
               <h3 className="font-serif text-2xl text-foreground mb-3">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{feature.description}</p>

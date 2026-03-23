@@ -14,18 +14,19 @@ export function Contact() {
   return (
     <section id="contact" className="py-32 px-6 bg-card">
       <div className="max-w-2xl mx-auto text-center">
-        <span className="text-sm uppercase tracking-widest text-muted-foreground mb-4 block">Начните</span>
+        <span className="text-sm uppercase tracking-widest text-muted-foreground mb-4 block">Начните сегодня</span>
         <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-foreground mb-6 text-balance">
-          Готовы обрести покой?
+          Сделайте первый шаг к тишине
         </h2>
         <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-          Присоединяйтесь к тысячам людей, открывших спокойный подход к работе. Оставьте email — мы поможем начать.
+          Оставьте email — мы пришлём приглашение и расскажем, как начать работать в новом ритме.
+          Уже более 4 000 человек выбрали другой путь.
         </p>
 
         {submitted ? (
           <div className="p-8 rounded-2xl bg-sage/10 border border-sage/20">
             <p className="text-foreground font-serif text-2xl mb-2">Добро пожаловать в Hvile</p>
-            <p className="text-muted-foreground">Проверьте почту — мы отправили следующие шаги.</p>
+            <p className="text-muted-foreground">Проверьте почту — там уже ждёт письмо с первым шагом.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
